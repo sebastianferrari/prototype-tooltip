@@ -10,11 +10,11 @@ $(document).ready(function () {
   var tooltipDirection;
 
   for (i = 0; i < $(".pin").length; i++) {
-    // set tooltip direction type - up or down             
+    // set tooltip direction type - left or right             
     if ($(".pin").eq(i).hasClass('pin-right')) {
-      tooltipDirection = 'tooltip-down';
+      tooltipDirection = 'tooltip-right';
     } else {
-      tooltipDirection = 'tooltip-up';
+      tooltipDirection = 'tooltip-left';
     }
 
     // append the tooltip
@@ -31,7 +31,7 @@ $(document).ready(function () {
   }
 
   // show/hide the tooltip
-  $('.tooltip-up, .tooltip-down').mouseenter(function () {
+  $('.tooltip-left, .tooltip-right').mouseenter(function () {
     $(this).children('.custom-tooltip').fadeIn(100);
   }).mouseleave(function () {
     $(this).children('.custom-tooltip').fadeOut(100);
